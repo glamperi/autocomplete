@@ -4,6 +4,10 @@
 
     $languages = explode(PHP_EOL, file_get_contents("languages.txt"));
 
+    $languages.getJSON( "test.js", function( json ) {
+  console.log( "JSON Data: " + json.users[ 3 ].name );
+ });
+
     $result = array();
     $test = strtolower($_POST["value"]);
     $length = strlen($test);
