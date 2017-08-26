@@ -4,7 +4,7 @@
 
     $languages = explode(PHP_EOL, file_get_contents("languages.txt"));
 
-$json_a = json_decode(languages.txt', true);
+$json_a = json_decode('languages.txt', true);
 
 foreach ($json_a as $person_name => $person_a) {
     echo $person_a['name'];
