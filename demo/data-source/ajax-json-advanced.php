@@ -4,20 +4,11 @@
 
     $languages = explode(PHP_EOL, file_get_contents("languages.txt"));
 
+$shipments = json_decode(file_get_contents("languages.txt"), true);
+print_r($shipments);
 
-$string = file_get_contents("languages.txt");
-$json = json_decode($string, true);
-$jsonIterator = new RecursiveIteratorIterator(
-    new RecursiveArrayIterator(json_decode($json, TRUE)),
-    RecursiveIteratorIterator::SELF_FIRST);
 
-foreach ($jsonIterator as $key => $val) {
-    if(is_array($val)) {
-        echo "$key:\n";
-    } else {
-        echo "$key => $val\n";
-    }
-}
+
     $result = array();
     $test = strtolower($_POST["value"]);
     $length = strlen($test);
