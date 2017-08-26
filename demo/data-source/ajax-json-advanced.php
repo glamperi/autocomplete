@@ -4,15 +4,17 @@
 
     $languages = explode(PHP_EOL, file_get_contents("languages.txt"));
 
-$json_a = json_decode("language.txt");
-     var_dump($json_a);
-echo "\n";
-     foreach($json_a as $row){
-         echo $row->status;
-         echo "\n";
-     }
+$json_a = json_decode(languages.txt', true);
 
-    $result = array();
+foreach ($json_a as $person_name => $person_a) {
+    echo $person_a['name'];
+}    
+
+
+
+
+
+$result = array();
     $test = strtolower($_POST["value"]);
     $length = strlen($test);
     foreach($languages as $key => $language){
