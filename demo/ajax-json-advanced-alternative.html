@@ -14,8 +14,8 @@
                         cb: {
                             populate: function() {                // change the post data
                                 return {
-                                    data1: $(this).data("user1"),    // add custom data from the text input
-                                    data2: $(this).data("user2"),    // ..
+                                    data1: $(this).data("name"),    // add custom data from the text input
+                                    data2: $(this).data("sku"),    // ..
                                     value: $(this).val()             // add the value
                                 }
                             },
@@ -30,7 +30,7 @@
                                 }
                                 return result;
                             },
-                            select: function(item.data("name"), i) {          // on select an item
+                            select: function(item, i) {          // on select an item
                                 $("#select").html(item);
                             }
                         },
@@ -38,7 +38,7 @@
                         match: false
                     })
                     .focus()
-                    .val("java")              // fill the input
+                    .val("GE")              // fill the input
                     .autocomplete("trigger"); // run the completion
 
                     // enable or disable tue autocompletion
@@ -54,7 +54,7 @@
         </script>
     </head>
     <body>
-        <span>Programming language</span> : <input id="entry" type="text" name="test" data-user1="hello" data-user2="world !">
+        <span>Best Buy Product Catalog</span> : <input id="entry" type="text" name="test" data-user1="hello" data-user2="world !">
         <br /><br />
         <input type="checkbox" id="enable" checked><label for="enable">Enable</label>
         <br /><br />
