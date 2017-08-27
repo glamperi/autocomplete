@@ -4,7 +4,7 @@
 
     $languages = explode(PHP_EOL, file_get_contents("languages.txt"));
 
-$decode_data = json_decode('languages.txt');
+$decode_data = json_decode($languages);
 foreach($decode_data as $key=>$value){
 
         print_r($value);
