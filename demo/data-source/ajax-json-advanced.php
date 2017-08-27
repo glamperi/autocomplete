@@ -6,17 +6,20 @@
 
 
 
-$jsondata = file_get_contents("languages.txt");
+$string = file_get_contents("languages.txt");
 
-$array = json_decode($jsondata,true);
+$json = json_decode($string, true);
 
-foreach($array as $k=>$val):
-    echo '<b>name: '.$k.'</b></br>';
-    $keys = array_keys($val);
-    foreach($keys as $key):
-        echo '&nbsp;'.ucfirst($key).' = '.$val[$key].'</br>';
-    endforeach;
-endforeach;
+foreach ($json as $key => $value) {
+    if (!is_array($value)) {
+        echo $key . '=>' . $value . '<br />';
+    } else {
+        foreach ($value as $key => $val) {
+            echo $key . '=>' . $val . '<br />';
+        }
+    }
+}
+
 
 $result = array();
 
