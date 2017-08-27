@@ -6,19 +6,6 @@
 
 
 
-$string = file_get_contents("languages.txt");
-
-$json = json_decode($string, true);
-
-foreach ($json as $key => $value) {
-    if (!is_array($value)) {
-        echo $key . '=>' . $value . '<br />';
-    } else {
-        foreach ($value as $key => $val) {
-            echo $key . '=>' . $val . '<br />';
-        }
-    }
-}
 
 
 $result = array();
