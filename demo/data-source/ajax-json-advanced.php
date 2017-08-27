@@ -15,7 +15,7 @@
     $sku = strtolower($_POST["sku"]);  
     $length = strlen($test);
     foreach($languages as $key => $language){
-        if (strtolower(substr($language, 0, $length)) === $test){
+        if (strtolower(substr($language, 0, $length)) === $name){
             $result[] = array( "data" => $name, "preview" => $sku );
         }
     }
