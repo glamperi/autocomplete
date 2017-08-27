@@ -8,7 +8,7 @@
 
 
 
-$result = array();
+//$result = array();
 
 
     $test = strtolower($_POST["name"]);
