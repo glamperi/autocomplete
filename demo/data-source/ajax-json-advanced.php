@@ -9,7 +9,7 @@ foreach($decode_data as $key=>$value){
 
         print_r($value);
 
-
+}
 
 
 $result = array();
