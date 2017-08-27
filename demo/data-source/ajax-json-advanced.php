@@ -11,11 +11,12 @@
 //$result = array();
 
 
-    $test = strtolower($_POST["name"]);
+    $name = strtolower($_POST["name"]);
+    $sku = strtolower($_POST["sku"]);  
     $length = strlen($test);
     foreach($languages as $key => $language){
         if (strtolower(substr($language, 0, $length)) === $test){
-            $result[] = array( "data" => $language, "preview" => $userData . " : " . $key );
+            $result[] = array( "data" => $name, "preview" => $sku );
         }
     }
 
