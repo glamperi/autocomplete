@@ -4,13 +4,19 @@
 
     $languages = explode(PHP_EOL, file_get_contents("languages.txt"));
 
-$decode_data = json_decode($languages);
-foreach($decode_data as $key=>$value){
 
-        print_r($value);
 
-}
+$jsondata = file_get_contents("languages.txt");
 
+$array = json_decode($jsondata,true);
+
+foreach($array as $k=>$val):
+    echo '<b>name: '.$k.'</b></br>';
+    $keys = array_keys($val);
+    foreach($keys as $key):
+        echo '&nbsp;'.ucfirst($key).' = '.$val[$key].'</br>';
+    endforeach;
+endforeach;
 
 $result = array();
 
